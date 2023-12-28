@@ -1,0 +1,22 @@
+.contain {
+    max-width: 1080px;
+    margin: 20px auto;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("./components/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand{
+    margin: auto;
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar-brand {
+    margin-left: 0 ;}
+  }
+.backgroundImage :hover{
+    cursor: pointer;
+}
