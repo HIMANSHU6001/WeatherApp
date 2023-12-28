@@ -46,64 +46,19 @@ const Side = (props) => {
 
 
   const fetchCities = async () => {
-    // console.log("fetching");
-    // const Mumbaiurl = `http://api.openweathermap.org/data/2.5/weather?lat=19.075833333&lon=72.8775&appid=${API_key}`
-    // const NycUrl = `http://api.openweathermap.org/data/2.5/weather?lat=40.7&lon=-74&appid=${API_key}`
-    // const BijUrl = `http://api.openweathermap.org/data/2.5/weather?lat=39.90403&lon=116.407526&appid=${API_key}`
-    // const DubUrl = `http://api.openweathermap.org/data/2.5/weather?lat=25.269722222&lon=55.309444444&appid=${API_key}`
-    // const MumbaiData = await fetch(Mumbaiurl);
-    // const parsedMumbaiData = await MumbaiData.json();
-    // setMumbai(parsedMumbaiData);
+    setProgress(10);
     const urls = [
       `http://api.openweathermap.org/data/2.5/weather?lat=19.075833333&lon=72.8775&appid=${API_key}`,
       `http://api.openweathermap.org/data/2.5/weather?lat=40.7&lon=-74&appid=${API_key}`,
       `http://api.openweathermap.org/data/2.5/weather?lat=39.90403&lon=116.407526&appid=${API_key}`,
       `http://api.openweathermap.org/data/2.5/weather?lat=25.269722222&lon=55.309444444&appid=${API_key}`
     ];
+    setProgress(50);
     const requests = urls.map(url => fetch(url).then(res => res.json()));
     const toMembers = responses => responses.map(response => response);
-
+    setProgress(70);
     Promise.all(requests).then(toMembers).then(members => setTemps(members));
-
-    // const NycData = await fetch(NycUrl);
-    // const parsedNycData = await NycData.json();
-    // setNyc(parsedNycData);
-
-    // const BijData = await fetch(BijUrl);
-    // const parsedBijData = await BijData.json();
-    // setBij(parsedBijData);
-
-    // const DubData = await fetch(DubUrl);
-    // const parsedDubData = await DubData.json();
-    // setDub(parsedDubData);
-
-    // cities.map(async (city, index) => {
-    //   setProgress(0);
-    //   const [lat, lon] = city.value.split(" ");
-    //   const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`
-    //   setProgress(40);
-    //   const data = await fetch(url);
-    //   const parsedData = await data.json();
-    //   setProgress(70);
-    //   switch (index) {
-    //     case 0:
-    //       setMumbai(parsedData)
-    //       break;
-    //     case 1:
-    //       setNyc(parsedData)
-    //       break;
-    //     case 2:
-    //       setBij(parsedData)
-    //       break;
-    //     case 3:
-    //       setDub(parsedData)
-    //       break;
-    //     default:
-    //       break;
-    //   }
-    //   setProgress(100);
-    //   setFetched(true);
-    // })
+    setProgress(100);
   }
 
   return (
@@ -134,35 +89,6 @@ const Side = (props) => {
           </div>
         ))
       }
-
-
-      {/*<div onClick={() => props.handleOnSearchChange(cities[1])} className="backgroundImage col bg-black bg-opacity-25 rounded-5 text-white p-3 my-2 row" style={{ marginRight: '5px', background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgnyc})`, backgroundPosition: "center", backgroundSize: "cover" }}>
-        <div className="row">
-          <div className="col-8"><h3 className="d-flex m-auto">New York</h3></div>
-          <div className="col m-auto"><h4 className="">{nyc.main.temp}°C</h4></div>
-        </div>
-        <div className="row">
-          <p className='my-2'>USA</p>
-        </div>
-      </div>
-      <div onClick={() => props.handleOnSearchChange(cities[2])} className="backgroundImage col bg-black bg-opacity-25 rounded-5 text-white p-3 my-2 row" style={{ marginRight: '5px', background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgbegin})`, backgroundPosition: "center", backgroundSize: "cover" }}>
-        <div className="row">
-          <div className="col-8"><h3 className="d-flex m-auto">Beijin</h3></div>
-          <div className="col m-auto"><h4 className="">{bij.main.temp}°C</h4></div>
-        </div>
-        <div className="row">
-          <p className='my-2'>China</p>
-        </div>
-      </div>
-      <div onClick={() => props.handleOnSearchChange(cities[3])} className="backgroundImage col bg-black bg-opacity-25 rounded-5 text-white p-3 my-2 row" style={{ marginRight: '5px', background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgDubai})`, backgroundPosition: "center", backgroundSize: "cover" }}>
-        <div className="row">
-          <div className="col-8"><h3 className="d-flex m-auto">Dubai</h3></div>
-          <div className="col m-auto"><h4 className="">{dub.main.temp}°C</h4></div>
-        </div>
-        <div className="row">
-          <p className='my-2'>UAE</p>
-        </div> 
-      </div>*/}
     </div>
   )
 }

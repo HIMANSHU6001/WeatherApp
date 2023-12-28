@@ -32,7 +32,7 @@ const Search = (props) => {
   return (
     <nav className="navbar sticky-top " style={{backgroundColor:'#2b8c32'}}>
       <div className="container-fluid">
-        <a className="navbar-brand text-white " href="#">WeatherNews</a>
+        <a className="navbar-brand text-white" href='/'>WeatherNews</a>
         <div style={{width:'800px', margin:'auto'}}><AsyncPaginate
           placeholder="Search for cities"
           debounceTimeout={600}
