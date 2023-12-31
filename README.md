@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h2>Weather News</h2>
 
-## Available Scripts
 
-In the project directory, you can run:
+  <div align="center">
+    <a href="https://himanshu6001.github.io/WeatherApp/">View Demo</a>
+    •
+    <a href="https://himanshu6001.github.io/WeatherApp/issues">Report Bug</a>
+    •
+    <a href="https://himanshu6001.github.io/WeatherApp/pulls">Request Feature</a>
+  </div>
 
-### `npm start`
+  <hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- Badges -->
+<div align="center">
 
-### `npm test`
+<a href='www.linkedin.com/in/himanshu-kaushik-aa2003280' target="_blank">LinkedIn Profile</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
 
-### `npm run build`
+<!-- Brief -->
+<p align="center">
+This Weather News app is a useful app which extracts data from the OpenWeather API and the map from Leaflet and react-leaflet. It is bootstrapped with React for Responsive and user-friendly UI.
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Table of contents
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Key Features](#key-features)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Installation](#installation)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Key Features
 
-### `npm run eject`
+- This website displays the Current weather and 6-day forecast which is recived from OpenWeather API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- It also equips a map which is built  with the help of leaflet and react-leaflet.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Easy to use Website, the use of bootstrap made this website a lot more beautiful and responsive.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Its a single page site which gives a good user experience. I does not load the whole page instead just the new data is mounted on the same site.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- A searchbar is there to load the information of any required city.
 
-## Learn More
+- The geocode Rapid API provides the necessary longitudes and latitudes of any city that we search for.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## My process
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Built with
 
-### Code Splitting
+- React
+- Bootstrap
+- React Query
+- React Router
+- React Hook Form
+- Styled Components
+- react-leaflet
+- leaflet
+- Openweather API
+- GeoCode Rapid API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### What I Learned
 
-### Analyzing the Bundle Size
+- **React Fundamentals:** I gained a solid understanding of React, including components, state management, and routing, allowing me to build dynamic user interfaces.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Responsive UI Design:** Styled Components were used to create responsive and visually appealing user interfaces that adapt to various screen sizes.
 
-### Making a Progressive Web App
+- **Integrating with Map** Leaflet provided a easy and flexible way to integrate a map through which this site is able to load different layers for the map.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Compound Component Pattern:** I implemented the Compound Component Pattern to create cohesive and reusable component groups, improving the organization and maintainability of the code.
 
-### Advanced Configuration
+- **Working with APIs:** I used two APIs in this project which gave me the exposure to the way of working of APIs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Git Version Control:** I practiced effective version control using Git, allowing for code management, and tracking project changes.
 
-### Deployment
+- **Project Planning and Management:** I gained experience in planning and managing a large-scale project, including feature development, bug fixing, and testing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+By building "NEWS Monkey" project with these technologies and concepts, I've developed a comprehensive set of skills and knowledge that can be applied to future projects and real-world scenarios. This experience has not only expanded my technical expertise but also improved my problem-solving capabilities.
 
-### `npm run build` fails to minify
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Clone this repo:
+
+```sh
+gh repo clone HIMANSHU6001/WeatherApp
+```
+
+- Install dependencies:
+
+```sh
+npm install
+```
+
+- Build command:
+
+```sh
+npm run build
+```
+
+- Live server:
+
+```sh
+npm run dev
+```
+
+### Author
+
+<b>👤 Himanshu</b>
+
+- LinkedIn - [@HIMANSHU6001](https://www.linkedin.com/in/himanshu-kaushik-aa2003280/)
+- Frontend Mentor - [@HIMANSHU6001](https://www.frontendmentor.io/profile/HIMANSHU6001)
+- Github: [@HIMANSHU6001](https://github.com/HIMANSHU6001)
+
+Feel free to contact me with any questions or feedback!
