@@ -16,9 +16,6 @@ const Side = (props) => {
 
   const API_key = '3ac6885830c3f62db920516318dc24b4';
 
-  useEffect(() => {
-    console.log(temps);
-  }, [temps])
 
   const cities = [
     {
@@ -42,7 +39,6 @@ const Side = (props) => {
   useEffect(() => {
     fetchCities();
   }, []);
-
 
 
   const fetchCities = async () => {

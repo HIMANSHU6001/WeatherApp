@@ -30,16 +30,17 @@ const Search = (props) => {
       .catch((err) => console.log(err));
   }
   return (
-    <nav className="navbar sticky-top " style={{backgroundColor:'#2b8c32'}}>
+    <nav className="navbar sticky-top " style={{ backgroundColor: '#2b8c32' }}>
       <div className="container-fluid">
         <a className="navbar-brand text-white" href='/'>WeatherNews</a>
-        <div style={{width:'800px', margin:'auto'}}><AsyncPaginate
-          placeholder="Search for cities"
-          debounceTimeout={600}
-          value={search}
-          onChange={handleOnChange}
-          loadOptions={loadOptions}
-        /></div>
+        <div style={{ width: '800px', margin: 'auto' }}>
+          <AsyncPaginate
+            placeholder="Search for cities"
+            debounceTimeout={600}
+            value={search}
+            onChange={handleOnChange}
+            loadOptions={loadOptions}
+          /></div>
       </div>
     </nav>
 

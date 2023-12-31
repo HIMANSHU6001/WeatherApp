@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Search from './components/Search'
-import {Rourkela} from "./Database";
+import { Rourkela } from "./Database";
 import Basic from './components/Basic';
 import Mid from "./components/Mid";
 import Side from "./components/Side";
+import WeatherMap from "./WeatherMap"
 import LoadingBar from 'react-top-loading-bar';
 
 const App = () => {
@@ -15,17 +16,20 @@ const App = () => {
   const [forecast, setForecast] = useState(Rourkela.forecast);
   const [location, setLocation] = useState("Rourkela, India");
   const [airQuality, setAirQuality] = useState(Rourkela.airQuality);
+  const [coords, setCoords] = useState([22.249166666, 84.882777777])
 
-  useEffect(()=>{
+  useEffect(() => {
     handleOnSearchChange({
       label: "Rourkela, India",
-      value: "22.249166666 84.882777777"})
-  },[])
+      value: "22.249166666 84.882777777"
+    })
+  }, [])
 
   const handleOnSearchChange = (searchData) => {
     setProgress(10);
-    console.log("SEARCH DATA", searchData)
-    const [lat, lon] = searchData.value.split(" ");
+    let [lat, lon] = searchData.value.split(" ");
+    console.log("lat",lat,"lon",lon);
+    setCoords([Number(lat), Number(lon)])
     setLocation(searchData.label);
     const weatherCurrent = fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`);
     const WeatherForecast = fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_key}`);
@@ -43,29 +47,29 @@ const App = () => {
         setProgress(100);
       })
       .catch((err) => console.log("err"))
-      
+
   }
 
   return (
-    <div >
+    <div>
       <Search onSearchChange={handleOnSearchChange} />
-      
       <div className="row mt-5 contain">
-      <LoadingBar
-        height={3}
-        color='#fff'
-        progress={progress}
-      />
+        <LoadingBar
+          height={3}
+          color='#fff'
+          progress={progress}
+        />
         <div className="col ">
           <Basic currentWeather={currentWeather} location={location} airQuality={airQuality} />
         </div>
         <div className="col-md">
-          <Mid currentWeather={currentWeather} forecast={forecast} />
+          <Mid currentWeather={currentWeather} forecastList={forecast.list} />
         </div>
         <div className="col-lg ">
-          <Side currentWeather={currentWeather} handleOnSearchChange={handleOnSearchChange}/>
+          <Side currentWeather={currentWeather} handleOnSearchChange={handleOnSearchChange} />
         </div>
       </div>
+      <WeatherMap coords={coords} location={location}/>
     </div>
 
   )
