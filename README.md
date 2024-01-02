@@ -4,8 +4,6 @@
 
 
   <div align="center">
-    <a href="https://himanshu6001.github.io/WeatherApp/">View Demo</a>
-    •
     <a href="https://himanshu6001.github.io/WeatherApp/issues">Report Bug</a>
     •
     <a href="https://himanshu6001.github.io/WeatherApp/pulls">Request Feature</a>
@@ -82,14 +80,14 @@ This Weather News app is a useful app which extracts data from the OpenWeather A
 
 - **Project Planning and Management:** I gained experience in planning and managing a large-scale project, including feature development, bug fixing, and testing.
 
-By building "NEWS Monkey" project with these technologies and concepts, I've developed a comprehensive set of skills and knowledge that can be applied to future projects and real-world scenarios. This experience has not only expanded my technical expertise but also improved my problem-solving capabilities.
+By building this Weather news app with these technologies and concepts, I've developed a comprehensive set of skills and knowledge that can be applied to future projects and real-world scenarios. This experience has not only expanded my technical expertise but also improved my problem-solving capabilities.
 
 ### Installation
 
 - Clone this repo:
 
 ```sh
-gh repo clone HIMANSHU6001/WeatherApp
+git clone https://github.com/HIMANSHU6001/WeatherApp.git
 ```
 
 - Install dependencies:
@@ -112,7 +110,7 @@ npm run dev
 
 ### Author
 
-<b>👤 Himanshu</b>
+<b>👤 Himanshu Kaushik</b>
 
 - LinkedIn - [@HIMANSHU6001](https://www.linkedin.com/in/himanshu-kaushik-aa2003280/)
 - Frontend Mentor - [@HIMANSHU6001](https://www.frontendmentor.io/profile/HIMANSHU6001)
